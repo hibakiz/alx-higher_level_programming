@@ -1,0 +1,5 @@
+#!/bin/bash
+PYFILE=$PYFILE
+PYFILEC="${PYFILE}.pyc"
+python -m py_compile "$PYFILE"
+exit $?
