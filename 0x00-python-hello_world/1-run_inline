@@ -1,2 +1,5 @@
 #!/bin/bash
-python3 $PYCODE
+PYCODE=$PYCODE
+NEWFILE=$(mktemp)
+echo "$PYCODE" > "$NEWFILE"
+python3 "$NEWFILE"
