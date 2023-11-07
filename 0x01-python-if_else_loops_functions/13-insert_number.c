@@ -1,32 +1,29 @@
 #include "lists.h"
-
 /**
- * insert_node - Iertyuiot.
- * @head: ertyuiulkygjt.
- * @number: ertfyhui
- * Return: 0.
- */
+*
+*
+*/
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *node = *head, *new;
+	listint_t *prev, *node, *new;
 
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-		return (NULL);
-	new->n = number;
-
-	if (node == NULL || node->n >= number)
+	if (!head)
+		return(NULL);
+	node = *head;
+	prev = node;
+	node = node->next;
+	while (node)
 	{
-		new->next = node;
-		*head = new;
-		return (new);
-	}
-
-	while (node && node->next && node->next->n < number)
+		if (node->n > number)
+		{
+			new = malloc(sizeof(listint_t));
+			new->n = number;
+			prev->next = new;
+			new->next = node;
+			return(new);
+		}
+		prev = node;
 		node = node->next;
-
-	new->next = node->next;
-	node->next = new;
-
-	return (new);
+	}
+	return(NULL);
 }
