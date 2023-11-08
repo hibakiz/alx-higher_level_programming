@@ -14,5 +14,4 @@ def roman_to_int(roman_string):
                         summ -= units.get(strr[i])
                     else:
                         summ += units.get(strr[i])
-        return (summ)
-    return (None)
+    return (summ)
