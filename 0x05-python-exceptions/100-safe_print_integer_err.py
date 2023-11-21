@@ -7,9 +7,7 @@ def safe_print_integer_err(value):
         print("{:d}".format(value))
         return (True)
     except ValueError as e:
-        if isinstance(value, int):
-            dtype = 'int'
-        elif isinstance(value, float):
+        if isinstance(value, float):
             dtype = "float"
         elif isinstance(value, complex):
             dtype = "complex"
