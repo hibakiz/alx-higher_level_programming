@@ -31,7 +31,6 @@ class Square:
         Args:
             value: the size.
         """
-        
 
         self.__size = value
 
