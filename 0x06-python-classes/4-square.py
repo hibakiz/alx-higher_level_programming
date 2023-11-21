@@ -5,7 +5,6 @@
 class Square:
     """the start of the class"""
 
-
     def __init__(self, size=0):
         """squre attrs.
 
