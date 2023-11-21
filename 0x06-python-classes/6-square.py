@@ -68,8 +68,7 @@ class Square:
         """spaces and #'s"""
         pos = ""
         if self.size == 0:
-            print()
-            return
+            return ("\n")
         for w in range(self.position[1]):
             pos += "\n"
         for w in range(self.size):
