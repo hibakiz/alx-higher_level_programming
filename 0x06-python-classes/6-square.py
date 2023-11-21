@@ -70,9 +70,9 @@ class Square:
         if self.size == 0:
             print()
             return
-        for i in range(self.position[1]):
+        for w in range(self.position[1]):
             pos += "\n"
-        for k in range(self.size):
+        for w in range(self.size):
             for i in range(self.position[0]):
                 pos += " "
             for j in range(self.size):
