@@ -8,6 +8,9 @@ class Square:
 
         Args:
             size: int .
+        Raises:
+            TypeError: integer test
+            ValueError: negative test
         """
         self.__size = size
 
