@@ -12,7 +12,6 @@ class Square:
             TypeError: integer test
             ValueError: negative test
         """
-        self.__size = size
 
     @property
     def size(self):
@@ -36,4 +35,4 @@ class Square:
 
     def area(self):
         """calc the area"""
-        return self.__size * self.__size
+        return (self.__size * self.__size)
