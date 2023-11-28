@@ -1,0 +1,7 @@
+#!/bin/bash
+read -p "Enter the filename: " filename
+chmod "$filename"
+git add "$filename"
+git commit -m "Day 3 of I hate OOP"
+git reset main.py add
+git push
