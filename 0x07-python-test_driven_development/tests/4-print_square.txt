@@ -1,0 +1,140 @@
+Test cases for 4-print_square
+===================================
+
+The function must print a square using # acording to a given size
+
+import the module:
+>>> sq = __import__('4-print_square').print_square
+
+Case 1: correct size
+>>> sq(3)
+###
+###
+###
+
+========================================================
+
+Case 2: zero size
+>>> sq(0)
+
+
+=========================================================
+
+Case 3: negative size
+>>> sq(-2)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+=========================================================
+
+Case 4: float size number
+>>> sq(2.56)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+=========================================================
+
+case 5: float negative size number
+>>> sq(-2.5)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+=========================================================
+
+Case 6: size is a string
+>>> sq("I don't know why I am writing a string in an integer var")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+=========================================================
+
+Case 7: size is a char
+>>> sq("I")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+=========================================================
+
+Case 8: size is inf
+>>> sq(float('inf'))
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+=========================================================
+
+Case 9: size is -inf:
+>>> sq(float('-inf'))
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+=========================================================
+
+Case 10: size is NaN
+>>> sq(float('nan'))
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+=========================================================
+
+Case 11: size is a list
+>>> sq([1, 2, 3])
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+=========================================================
+
+Case 12: size is a tuple
+>>> sq((1, 2))
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+=========================================================
+
+Case 13: sending two arguments
+>>> sq(1, 2)
+Traceback (most recent call last):
+    ...
+TypeError: print_square() takes 1 positional argument but 2 were given
+
+=========================================================
+
+Case 14: sending no args
+>>> sq()
+Traceback (most recent call last):
+    ...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+==========================================================
+
+Case 15: size is None
+>>> sq(None)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+===========================================================
+
+Case 16: no args calling
+>>> sq()
+Traceback (most recent call last):
+    ...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+=========================================================
+
+Case 17: more than one args
+>>> sq(1,2)
+Traceback (most recent call last):
+    ...
+TypeError: print_square() takes 1 positional argument but 2 were given
+

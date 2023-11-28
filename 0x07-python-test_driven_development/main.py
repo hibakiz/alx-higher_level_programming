@@ -1,2 +1,2 @@
-name = __import__('3-say_my_name').say_my_name
-name("sd", "ds", "dr")
+sq = __import__('4-print_square').print_square
+sq(3,4)
