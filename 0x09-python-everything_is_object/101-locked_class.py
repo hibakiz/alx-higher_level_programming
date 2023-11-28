@@ -4,4 +4,4 @@
 
 class LockedClass:
     ''' the LockedClass to prevent adding attrubites rather than first name'''
-    __slots__ = ['first_name'] 
+    __slots__ = ['first_name']
