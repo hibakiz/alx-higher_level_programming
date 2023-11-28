@@ -1,0 +1,157 @@
+Test cases for 0-add_integer module
+===================================
+
+The function must add two intgers and return an integer
+
+import the module:
+>>> add_integer = __import__('0-add_integer').add_integer
+
+case 1:
+>>> add_integer(1, 2)
+3
+
+case 2:
+>>> add_integer(3.14, 2.72)
+5
+
+case 3:
+>>> add_integer(-5, -2)
+-7
+
+case 4
+>>> add_integer(1.2, 2.1)
+3
+
+case 5
+>>> add_integer("hello", 5)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+case 6
+>>> add_integer(1, "hello")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+case 7
+>>> add_integer(1, 98)
+99
+
+>>> add_integer(100)
+198
+
+case 8
+>>> isinstance(add_integer(2.2, 7.4), int)
+True
+
+case 9
+>>> add_integer(float('inf'), 4)
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+
+case 10
+>>> add_integer(5, "world")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+case 11:
+>>> add_integer(4, float('-inf'))
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+
+case 12:
+>>> add_integer(float(float('inf')))
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+
+case 13:
+>>> add_integer(4, float('nan'))
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
+
+case 14:
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
+
+case 15:
+>>> add_integer(10, -99)
+-89
+
+case 16:
+>>> add_integer(1, 4.567)
+5
+
+case 17:
+>>> add_integer(1, -4.567)
+-3
+
+case 18:
+>>> add_integer(4.567)
+102
+
+case 19:
+>>> add_integer(-1, 4.567)
+3
+
+case 20:
+>>> add_integer(-8.98)
+90
+
+case 21:
+>>> add_integer(-10, 4.567)
+-6
+
+case 22:
+>>> add_integer(-9.81, -4.567)
+-13
+
+case 23:
+>>> add_integer('H', 4.567)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+case 24:
+>>> add_integer(98, 'H')
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+case 25:
+>>> add_integer('H', 'J')
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+case 26:
+>>> add_integer((45,56))
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+case 27:
+>>> add_integer(5, [2,4])
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+case 28:
+>>> add_integer([4,5], 6)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+case 29:
+>>> add_integer(9, [])
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
