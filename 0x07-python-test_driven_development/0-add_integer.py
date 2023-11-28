@@ -15,9 +15,10 @@ def add_integer(a, b=98):
     if isinstance(b, float):
         b = int(b)
     if a == 'inf' or a == '-inf':
-       raise OverflowError("OverflowError: cannot convert float infinity to integer")
+        msg = "OverflowError: cannot convert float infinity to integer"
+        raise OverflowError(msg)
     if b == 'inf' or b == '-inf':
-       raise OverflowError("OverflowError: cannot convert float infinity to integer")
+        raise OverflowError(msg)
     if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
     if not isinstance(b, int) and not isinstance(b, float):

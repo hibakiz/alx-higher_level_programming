@@ -1,7 +1,7 @@
-Test cases for 0-add_integer module
+Test cases for 2-matrix_divided module
 ===================================
 
-The function must add two intgers and return an integer
+The function must divide a matrix with a num given
 
 import the module:
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided

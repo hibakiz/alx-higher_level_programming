@@ -1,2 +1,5 @@
-sq = __import__('4-print_square').print_square
-sq(3,4)
+#!/usr/bin/python3
+max_integer = __import__('6-max_integer').max_integer
+
+print(max_integer("Ehoneah"))
+
