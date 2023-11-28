@@ -155,3 +155,21 @@ Traceback (most recent call last):
     ...
 TypeError: b must be an integer
 
+Case 30: no args calling
+>>> add_integer()
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Case 31: one arg b
+>>> add_integer(b=98)
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Case 32: more than 2 arg
+>>> add_integer(98, 87, 77)
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+

@@ -1,0 +1,109 @@
+Test cases for 3-say_my_name module
+===================================
+
+The function must add two intgers and return an integer
+
+import the module:
+>>> name = __import__('3-say_my_name').say_my_name
+
+case 1 : first name and last name are string
+>>> name('Ceylin', 'Kaya')
+My name is Ceylin Kaya
+
+=======================================================
+
+case 2: no last name
+>>> name('Ceylin')
+My name is Ceylin 
+
+=======================================================
+
+case 3: fisrt name is  int
+>>> name(23, 'Kaya')
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+=======================================================
+
+case 4: last name is int
+>>> name('Ceylin', 45)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+=======================================================
+
+case 5: first name is a char
+>>> name('C', 'Kaya')
+My name is C Kaya
+
+==========================================================
+
+case 6: last name is char 
+>>> name ('Ceylin', 'K')
+My name is Ceylin K
+
+=======================================================
+
+case 7: first name is NULL
+>>> name("NULL", 'Kaya')
+My name is NULL Kaya
+
+case 8: first name is NULL
+>>> name('Kaya', "NULL")
+My name is Kaya NULL
+
+=======================================================
+
+case 9: both are NULL
+>>> name("NULL", "NULL")
+My name is NULL NULL
+
+=======================================================
+
+case 10: both are not string
+>>> name (['H', 'i'], 98)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+=======================================================
+
+Case 11:
+>>> name({"Ceylin": 98, "Kaya": 99}, 'KA')
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+=======================================================
+
+Case 12:
+>>> name(None)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+=======================================================
+
+Case 13:
+>>> name()
+Traceback (most recent call last):
+   ...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+===========================================================
+
+Case 14:
+>>> name("sd", "ds", "dr")
+Traceback (most recent call last):
+   ...
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+==========================================================
+
+Case 15:
+>>> name(last_name="ss")
+Traceback (most recent call last):
+   ...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
