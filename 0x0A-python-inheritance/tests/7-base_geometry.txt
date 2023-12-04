@@ -36,7 +36,7 @@ Case 4: Checking integer validator for passing integer:
 -------------------------------------------
 
 Case 5: Checking for area failure:
->>> b = BG()
+>>> b = geo()
 >>> b.area()
 Traceback (most recent call last):
 ...
