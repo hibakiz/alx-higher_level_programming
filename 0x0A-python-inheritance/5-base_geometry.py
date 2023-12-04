@@ -3,4 +3,4 @@
 
 
 class BaseGeometry:
-   """BaseGeometry class"""
+    """BaseGeometry class"""
