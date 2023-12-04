@@ -14,13 +14,4 @@ def lookup(obj):
         A list containing the names of attributes and methods.
     """
 
-    attributes = []
-
-    if hasattr(obj, "__dict__"):
-        attributes.extend(obj.__dict__.keys())
-
-    for name, value in obj.__class__.__dict__.items():
-        if callable(value):
-            attributes.append(name)
-
-    return [attr for attr in attributes]
+    return dir(obj)
