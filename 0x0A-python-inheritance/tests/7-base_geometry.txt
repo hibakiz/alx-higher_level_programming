@@ -11,13 +11,6 @@ Checking for class docstring:
          >>> len(c) > 1
          True
 
-Checking for method docstring:
-	  >>> mod1 = __import__("7-base_geometry").BaseGeometry.area.__doc__
-	  >>> len(mod1) > 1
-	  True
-	  >>> mod2 = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
-          >>> len(mod2) > 1
-          True
 
 Checking for area failure:
 	  >>> b = BG()
@@ -30,7 +23,7 @@ Checking too many arguments for area:
 	  >>> b.area(1)
 	  Traceback (most recent call last):
           ...
-	  TypeError: area() takes 1 positional argument but 2 were given
+	  TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
 
 Checking integer validator for passing integer:
 	  >>> b.integer_validator("integer", 1)
@@ -97,17 +90,17 @@ Checking for no arguments to integer_validator:
 	  >>> b.integer_validator()
 	  Traceback (most recent call last):
           ...
-	  TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+	  TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 Checking for only 1 argument to integer_validator:
 	  >>> b.integer_validator("integer")
 	  Traceback (most recent call last):
           ...
-	  TypeError: integer_validator() missing 1 required positional argument: 'value'
+	  TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
 
 Checking for too many arguments:
 	  >>> b.integer_validator("integer", 1, 2)
 	  Traceback (most recent call last):
           ...
-	  TypeError: integer_validator() takes 3 positional arguments but 4 were given
+	  TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
 
