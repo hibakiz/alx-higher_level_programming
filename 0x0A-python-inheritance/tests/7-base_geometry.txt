@@ -79,8 +79,17 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 
 -------------------------------------------
 
-Case 10:
+Case 10: Checking for only 1 argument to integer_validator:
+>>> b.integer_validator("integer")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 -------------------------------------------
 
+Case 11: Checking for too many arguments:
+>>> b.integer_validator("integer", 1, 2)
+Traceback (most recent call last):
+...
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
