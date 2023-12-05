@@ -11,4 +11,4 @@ def load_from_json_file(filename):
     filename: the file to write to
     """
     with open(filename, 'w') as f:
-        json.load(my_obj, f)
+        return json.load(my_obj, f)
