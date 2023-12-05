@@ -7,8 +7,7 @@ import json
 def load_from_json_file(filename):
     """ read from a file using json
     Args:
-    my_obj: the object to convert to json
     filename: the file to write to
     """
-    with open(filename, 'w') as f:
+    with open(filename, 'r') as f:
         return json.load(f)
