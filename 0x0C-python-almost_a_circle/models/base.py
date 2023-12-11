@@ -68,4 +68,4 @@ class Base:
 				list_doc = cls.from_json_string(strr)
 				for dicti in list_doc:
 					list_instance.append(cls.create(**dicti))
-			return list_instance
+		return list_instance
