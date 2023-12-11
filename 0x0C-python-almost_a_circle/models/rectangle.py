@@ -126,4 +126,12 @@ class Rectangle(Base):
 					self.x = value
 				elif key == "y":
 					self.y = value
-			
+
+	# to dictionary
+	def to_dictionary(self):
+		"""retrun the dictionary of a Rectangle"""
+		return {'id': self.id,
+		'width': self.width,
+		'height': self.height,
+		'x': self.x,
+		'y': self.y}		
