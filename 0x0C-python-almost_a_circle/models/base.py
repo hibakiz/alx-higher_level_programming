@@ -2,7 +2,9 @@
 """Base class module """
 
 import json
-import os.path
+import os
+import csv
+
 
 
 class Base:
@@ -69,3 +71,39 @@ class Base:
 				for dicti in list_doc:
 					list_instance.append(cls.create(**dicti))
 		return list_instance
+
+	#save JSON but CSV
+	@classmethod
+	def save_to_file_csv(cls, list_objs):
+		"""Save to a json file as csv format"""
+		filename = f"{cls.__name__}.csv"
+		with open(filename, 'w', newline="") as f:
+			if list_objs is None or len(list_objs) == 0:
+				f.write("[]")
+			else:
+				if cls.__name__ == "Square":
+					fields = ["id", "size", "x", "y"]
+				else:
+					fields = ["id", "width", "height", "x", "y"]
+				writer = csv.DictWriter(f, fieldnames=fields)
+				for obj in list_objs:
+					writer.writerow(obj.to_dictionary()) 
+
+
+	#load from JSON but CSV
+	@classmethod
+	def load_from_file_csv(cls):
+		"""load from  json file as csv format"""
+		filename = f"{cls.__name__}.csv"	
+		try:
+			with open(filename, "r", newline="") as csvfile:
+				if cls.__name__ == "Rectangle":
+					fieldnames = ["id", "width", "height", "x", "y"]
+				else:
+					fieldnames = ["id", "size", "x", "y"]
+				list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
+				list_dicts = [dict([k, int(v)] for k, v in d.items())
+				for d in list_dicts]
+			return [cls.create(**d) for d in list_dicts]
+		except IOError:
+			return []	
