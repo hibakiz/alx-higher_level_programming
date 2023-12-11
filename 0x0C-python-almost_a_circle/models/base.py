@@ -2,6 +2,7 @@
 """Base class module """
 
 import json
+import os.path
 
 
 class Base:
@@ -53,3 +54,18 @@ class Base:
 			dummy = cls(1)
 		dummy.update(**dictionary)
 		return dummy
+
+	# load from file function
+	@classmethod
+	def load_from_file(cls):
+		"""load the data from a file"""
+		filename = f"{cls.__name__}.json"
+		list_instance = []
+		list_doc = []
+		if os.path.exists(filename):
+			with open(filename, 'r') as f:
+				strr = f.read()
+				list_doc = cls.from_json_string(strr)
+				for dicti in list_doc:
+					list_instance.append(cls.create(**dicti))
+			return list_instance
