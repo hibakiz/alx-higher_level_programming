@@ -37,8 +37,8 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
         if args and len(args) != 0:
-            if type(args[0]) != int and args[0] is not None:
-                    raise TypeError("id must be an integer")
+            if type(args[0]) is not int and args[0] is not None:
+                raise TypeError("id must be an integer")
             for i in range(len(args)):
                 if i == 0:
                     if i is None:
