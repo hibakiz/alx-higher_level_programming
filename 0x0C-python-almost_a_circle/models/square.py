@@ -46,7 +46,7 @@ class Square(Rectangle):
 					else:
 						self.id = args[0]
 				elif i == 1:
-					self.width = args[1]
+					self.size = args[1]
 				elif i == 2:
 					self.x = args[2]
 				elif i == 3:
@@ -59,7 +59,7 @@ class Square(Rectangle):
 					else:
 						self.id = value
 				elif key == "size":
-					self.width = value
+					self.size = value
 				elif key == "x":
 					self.x = value
 				elif key == "y":
