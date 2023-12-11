@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Test cases for the Rectangle class
+'''Test cases for the base class
 '''
 
 
