@@ -15,7 +15,8 @@ class Base:
 			Base.__nb_objects += 1
 			self.id = self.__nb_objects
 
-	#to json function
+	#to json function as static
+	@staticmethod
 	def to_json_string(list_dictionaries):
 		"""Convert to json string function"""
 		if list_dictionaries is None or len(list_dictionaries) < 2:
