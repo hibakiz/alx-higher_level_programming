@@ -109,6 +109,7 @@ class Base:
             return []
 
     # Draw the square and rectangles
+    @staticmethod
     def draw(list_rectangles, list_squares):
         """Draw Rectangles and Squares
         """
