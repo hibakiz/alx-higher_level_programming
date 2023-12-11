@@ -10,6 +10,7 @@ import turtle
 class Base:
     """ the Base class"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         """the constructor"""
         if id is not None:
@@ -18,7 +19,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
 
-    #to json function as static
+    # to json function as static
     @staticmethod
     def to_json_string(list_dictionaries):
         """Convert to json string function"""
@@ -26,7 +27,7 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
-    #save to json file function
+    # save to json file function
     @classmethod
     def save_to_file(cls, list_objs):
         """Save the data to json file"""
@@ -38,7 +39,7 @@ class Base:
                 list_dicts = [i.to_dictionary() for i in list_objs]
                 f.write(cls.to_json_string(list_dicts))
 
-    #from json to string function
+    # from json to string function
     @staticmethod
     def from_json_string(json_string):
         """convert from json to string"""
@@ -46,7 +47,7 @@ class Base:
             return []
         return json.loads(json_string)
 
-    #create function
+    # create function
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
@@ -72,7 +73,7 @@ class Base:
                     list_instance.append(cls.create(**dicti))
         return list_instance
 
-    #save JSON but CSV
+    # save JSON but CSV
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """Save to a json file as csv format"""
@@ -87,14 +88,13 @@ class Base:
                     fields = ["id", "width", "height", "x", "y"]
                 writer = csv.DictWriter(f, fieldnames=fields)
                 for obj in list_objs:
-                    writer.writerow(obj.to_dictionary()) 
+                    writer.writerow(obj.to_dictionary())
 
-
-    #load from JSON but CSV
+    # load from JSON but CSV
     @classmethod
     def load_from_file_csv(cls):
         """load from  json file as csv format"""
-        filename = f"{cls.__name__}.csv"    
+        filename = f"{cls.__name__}.csv"
         try:
             with open(filename, "r", newline="") as csvfile:
                 if cls.__name__ == "Rectangle":
@@ -103,11 +103,12 @@ class Base:
                     fieldnames = ["id", "size", "x", "y"]
                 list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
                 list_dicts = [dict([k, int(v)] for k, v in d.items())
-                for d in list_dicts]
-            return [cls.create(**d) for d in list_dicts]
+                              for d in list_dicts]
+                return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
 
+    # Draw the square and rectangles
     def draw(list_rectangles, list_squares):
         """Draw Rectangles and Squares
         """
@@ -143,4 +144,3 @@ class Base:
             turt.hideturtle()
 
         turtle.exitonclick()
-    
