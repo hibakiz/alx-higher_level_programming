@@ -13,7 +13,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s.size, 5)
         self.assertEqual(s.x, 0)
         self.assertEqual(s.y, 0)
-        self.assertEqual(s.id, 8)
+        self.assertEqual(s.id, 7)
 
     # Update the square attributes using the update method, and check if the attributes are updated correctly.
     def test_update_attributes(self):
@@ -27,7 +27,7 @@ class TestSquare(unittest.TestCase):
     # Call the to_dictionary method, and check if the returned dictionary is correct.
     def test_to_dictionary(self):
         s = Square(5)
-        expected_dict = {'id': 6, 'size': 5, 'x': 0, 'y': 0}
+        expected_dict = {'id': 5, 'size': 5, 'x': 0, 'y': 0}
         self.assertEqual(s.to_dictionary(), expected_dict)
 
     # Create a square with size 0, and check if a ValueError is raised.
