@@ -13,7 +13,7 @@ if __name__ == "__main__":
     arg = list(sys.argv)
     db = MySQLdb.connect(user=arg[1], password=arg[2], database=arg[3])
     cursor = db.cursor()
-    cursor.("""SELECT * FROM states ORDER BY id ASC;""")
+    cursor.execute("""SELECT * FROM states ORDER BY id ASC;""")
     for row in cursor:
         print(row)
 
