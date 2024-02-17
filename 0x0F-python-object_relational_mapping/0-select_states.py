@@ -11,3 +11,5 @@ cursor.execute("""SELECT * FROM states ORDER BY id ASC;""")
 i = 0
 for row in cursor:
     print(row)
+
+if __name__ == "__main__"
