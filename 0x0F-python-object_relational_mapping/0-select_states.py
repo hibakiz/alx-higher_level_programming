@@ -12,4 +12,5 @@ i = 0
 for row in cursor:
     print(row)
 
-if __name__ == "__main__"
+if __name__ == "__main__":
+    pass
