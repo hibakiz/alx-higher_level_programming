@@ -13,7 +13,7 @@ if __name__ == "__main__":
     db = MySQLdb.connect(
         host="localhost", port=3306, user=argv[1], password=argv[2], database=argv[3])
     cursor = db.cursor()
-    cursor.execute("""SELECT * FROM states""")
+    cursor.execute("SELECT * FROM states")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
