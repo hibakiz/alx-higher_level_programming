@@ -7,8 +7,7 @@ import sys
 arg = list(sys.argv)
 db = MySQLdb.connect(user=arg[1], password=arg[2], database=arg[3])
 cursor = db.cursor()
-cursor.execute("""SELECT * FROM states ORDER BY id ASC;""")
-i = 0
+cursor.("""SELECT * FROM states ORDER BY id ASC;""")
 for row in cursor:
     print(row)
 
