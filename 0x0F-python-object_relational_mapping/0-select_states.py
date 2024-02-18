@@ -10,7 +10,8 @@ if __name__ == "__main__":
     """
     lists all states from the database hbtn_0e_0_usa
     """
-    db = MySQLdb.connect(user=argv[1],
+    db = MySQLdb.connect(
+        user=argv[1],
         password=argv[2],
         database=argv[3])
     cursor = db.cursor()
