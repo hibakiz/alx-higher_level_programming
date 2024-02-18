@@ -15,7 +15,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
     deli = ";"
     state_name = argv[4].split(deli)
-    qury = "SELECT * FROM states WHERE name LIKE BINARY '{}'".format(state_name[0])
+    qury = "SELECT * FROM states\
+        WHERE name LIKE BINARY '{}'".format(state_name[0])
     cursor.execute(qury)
     for row in cursor:
         print(row)
