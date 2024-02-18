@@ -13,7 +13,7 @@ if __name__ == "__main__":
     """
     db = MySQLdb.connect(user=argv[1], passwd=argv[2], database=argv[3])
     cursor = db.cursor()
-    qury = f"SELECT * FROM states WHERE name LIKE BINARY '{argv[4]}'"
+    qury = "SELECT * FROM states WHERE name LIKE BINARY '{}'".format(argv[4])
     cursor.execute(qury)
     for row in cursor:
         print(row)
