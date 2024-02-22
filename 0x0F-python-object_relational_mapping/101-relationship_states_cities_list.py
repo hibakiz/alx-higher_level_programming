@@ -2,14 +2,14 @@
 """
 Lists all State objects and corresponding City objects contained in the DB
 """
-import sys
+from sys import argv
 from relationship_state import Base, State
 from relationship_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-iif __name__ == "__main__":
+if __name__ == "__main__":
     """
     lists all states from the database hbtn_0e_0_usa
     """

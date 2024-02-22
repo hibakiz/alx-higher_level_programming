@@ -19,13 +19,13 @@ if __name__ == "__main__":
 
     engine = create_engine(f"mysql+mysqldb://{username}:\
                             {password}@localhost:3306/{db}")
-    Base.metadata.bind = engine
+    Base.metadata.create_all(engine)
     dbsession = sessionmaker(bind=engine)
     session = dbsession()
 
     cal_state = State(name='California')
     san_city = City(name='San Francisco')
-    cal_state.cities.append(sfr_city)
+    cal_state.cities.append(san_city)
 
     session.add(cal_state)
     session.commit()
