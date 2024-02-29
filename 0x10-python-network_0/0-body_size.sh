@@ -1,2 +1,2 @@
 #!/bin/bash
-curl -I "$1" | grep Content-Length
+curl -s -I "$1"
