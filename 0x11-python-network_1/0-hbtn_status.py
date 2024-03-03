@@ -13,6 +13,6 @@ with urllib.request.urlopen(url) as page:
   content = page.read()
 
 print ("Body response:")
-print(f"    - type:{type(content)}")
-print(f"    - content: {content}")
-print(f"    - utf8 content: {content.decode('utf-8')}")
+print(f"\t- type: {type(content)}")
+print(f"\t- content: {content}")
+print(f"\t- utf8 content: {content.decode('utf-8')}")
