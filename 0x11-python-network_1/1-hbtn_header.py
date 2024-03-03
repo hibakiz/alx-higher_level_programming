@@ -5,10 +5,10 @@ https://alx-intranet.hbtn.io/status
 
 
 import urllib.request
-from sys import argv
+import sys
 
 
-url = argv[1]
+url = sys.argv[1]
 
 with urllib.request.urlopen(url) as page:
     headers = dict(page.getheaders())
