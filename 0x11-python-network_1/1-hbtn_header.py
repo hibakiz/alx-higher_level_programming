@@ -14,4 +14,3 @@ with urllib.request.urlopen(url) as page:
     headers = dict(page.getheaders())
     id = headers.get("X-Request-Id")
     print(id)
-
