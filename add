@@ -1,6 +1,4 @@
-#!/bin/bash
-chmod 777 0x01-python-if_else_loops_functions/*
-git add 0x01-python-if_else_loops_functions
-git commit -m "nnnnnnnnnnoooooooooooooo"
-git reset 0x01-python-if_else_loops_functions/main.py
+chmod 777 0x11-python-network_1/*
+git add 0x11-python-network_1
+git commit -m "Tired yaaaaaaaaa5"
 git push
